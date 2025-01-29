@@ -13,7 +13,7 @@
 
 // Step 3
 // create a function the gets the human choice
-// this functio will also return one of the valid choices depending on what the use input.
+// this function will also return one of the valid choices depending on what the user input.
 // test what the function returns by using console.log.
 
 // Step 4
