@@ -40,22 +40,26 @@ function getComputerChoice() {
         return "paper";
     } else (randomNumber === 2) 
         return "scissors";
+
 }
 
 console.log(getComputerChoice());
 
 
 function getHumanChoice() {
-    const playerChoice = parseInt(prompt("Please enter a number from 1 to 3: "));
-
-    if (playerChoice < 1 || playerChoice > 3) {
-        alert("Please enter a valid number");
-    } else if (playerChoice === 1) {
-        return "rock";
-    } else if (playerChoice === 2) {
-        return "paper";
-    } else if (playerChoice === 3) {
-        return "scissors";
-    }
+    const playerChoice = prompt("Please choose between rock, paper or scissors: ").toLowerCase();
+        return playerChoice;
 } 
 console.log(getHumanChoice());
+
+// function playRound(humanChoice, computerchoice) {
+        
+//     const computerChoice = getComputerChoice();
+//     const humanSelection = getHumanChoice();
+
+//     if (computerSelection === humanSelection) {
+//         return "it is a tie";
+//     }
+
+// }
+// playRound(humanSelection, computerSelection);
