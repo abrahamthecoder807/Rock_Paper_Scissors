@@ -26,6 +26,9 @@
 // create a function named playRound.
 // define two parameters for playRound: humanchhoice and computerchoice. use these two parameter to take the human and computer as argument
 
+let humanScore = 0;
+let computerScore = 0;
+
 console.log("Hello world!");
 
 function getComputerChoice() {
