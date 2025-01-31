@@ -1,8 +1,5 @@
-
 let humanScore = 0;
 let computerScore = 0;
-
-
 
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -17,7 +14,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    // const prompt = require('prompt-sync')();
+    const prompt = require('prompt-sync')();     // if you are trying to play the game on your local machine terminal comment out this line of code so as to avoid error message.
     const playerChoice = prompt("Please choose between rock, paper or scissors: ").toLowerCase();
         return playerChoice;
 } 
@@ -41,12 +38,29 @@ function playRound(humanChoice, computerChoice) {
         }
 }
 
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
+function playGame() {
+    
+    while (humanScore < 5 && computerScore < 5) {
 
-console.log(humanSelection)
-console.log(computerSelection)
-console.log(`Computer score is ${computerScore}`);
-console.log(`Human score is ${humanScore}`)
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
 
-console.log(playRound(humanSelection, computerSelection));
+        console.log(humanSelection)
+        console.log(computerSelection)
+        
+    
+        playRound(humanSelection, computerSelection);
+        console.log(`Computer score is ${computerScore}`);
+        console.log(`Human score is ${humanScore}`)
+    
+    }
+    if (humanScore === 5) {
+        console.log("Congrats! you won the game!")
+    } else {
+        console.log("You lose! the computerwon the game.")
+    }
+
+}
+
+playGame();
+
